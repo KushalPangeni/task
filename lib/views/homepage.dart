@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:task/tabs/kot.dart';
-import 'package:task/tabs/order.dart';
+import 'package:task/views/tabs/kot.dart';
+import 'package:task/views/tabs/order.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -33,15 +33,17 @@ class _HomePageState extends State<HomePage> {
             children: [
               //Title and arrow
               Row(
-                children: const [
+                children: [
                   Text(
                     'The Grill',
                     style: TextStyle(color: Colors.teal),
                   ),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    color: Colors.teal,
-                  )
+                  IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.teal,
+                      ))
                 ],
               ),
               InkWell(
@@ -63,23 +65,6 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               )
-              // SizedBox(
-              //   height: 14,
-              //   width: 15,
-              //   child: IconButton(
-              //       onPressed: () {},
-              //       iconSize: 14,
-              //       icon: Row(children: const [
-              //         Text(
-              //           "Help",
-              //           style: TextStyle(color: Colors.black, fontSize: 14),
-              //         ),
-              //         Icon(
-              //           Icons.mode_comment,
-              //           color: Colors.black,
-              //         ),
-              //       ])),
-              // )
             ],
           ),
         ),

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:task/models/list_of_items.dart';
 
 class TOO extends StatefulWidget {
   final String tablename;
@@ -75,28 +76,9 @@ class _TOOState extends State<TOO> {
                   ),
                 ),
                 //List of item
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: foods.length,
-                    itemBuilder: ((context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 4, 0, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              foods[index],
-                              style: TextStyle(fontSize: 10),
-                            ),
-                            Text(
-                              noOforders[index].toString(),
-                              style: TextStyle(fontSize: 10),
-                            ),
-                          ],
-                        ),
-                      );
-                    }),
-                  ),
+                ListOfItems(
+                  foods: foods,
+                  noOforders: noOforders,
                 ),
                 //divider
                 Divider(),
@@ -105,7 +87,7 @@ class _TOOState extends State<TOO> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Dishes: 13",
+                      "Dishes: ${foods.length}",
                       style: TextStyle(fontSize: 10),
                     ),
                     Text(

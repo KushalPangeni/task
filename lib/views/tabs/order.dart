@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:task/table_of_order.dart';
+import 'package:task/models/table_of_order.dart';
 
 class Order extends StatelessWidget {
   const Order({super.key});
@@ -46,8 +46,8 @@ class Order extends StatelessWidget {
         ),
         //Gridview containers
         TOO(
-          food: ['Mid Steak', 'Taco', 'Chi Burger', 'Wine'],
-          noOforder: [1, 4, 5, 3],
+          food: ['Mid Steak', 'Taco', 'Chi Burger', 'Wine', 'Thukpa'],
+          noOforder: [1, 4, 5, 3, 2],
           tablename: 'First Floor T4',
         ),
         TOO(
@@ -56,8 +56,8 @@ class Order extends StatelessWidget {
           tablename: 'Roof T2',
         ),
         TOO(
-          food: ['Mid Steak', 'Taco', 'Chi Burger', 'Wine'],
-          noOforder: [1, 1, 4, 3],
+          food: ['Chowmin', 'Taco', 'Chi Burger'],
+          noOforder: [1, 1, 4],
           tablename: 'Balcony Table',
         ),
         TOO(
